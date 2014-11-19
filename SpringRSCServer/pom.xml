@@ -4,12 +4,12 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>org.test</groupId>
-	<artifactId>demo</artifactId>
+	<artifactId>SpringRSServer</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>SpringRSCServer</name>
-	<description>SpringRSCServer</description>
+	<name>SpringRSServer</name>
+	<description>SpringRSServer</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
