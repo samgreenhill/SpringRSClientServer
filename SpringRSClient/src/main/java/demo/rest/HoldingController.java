@@ -2,6 +2,7 @@ package demo.rest;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import demo.domain.Holding;
@@ -23,7 +24,7 @@ public class HoldingController {
 	}
 	
 	@RequestMapping("/holdings")
-	public Holding[] getHoldings() {
-		return service.getHoldings();
+	public Holding[] getHoldings(@RequestParam(value="type", defaultValue="GET") String type, @RequestParam(value="number", defaultValue="10") int number) {
+		return type.equalsIgnoreCase("GET") ? service.getHoldings() : service.postHoldings();
 	}
 }
